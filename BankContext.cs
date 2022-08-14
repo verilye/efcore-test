@@ -14,16 +14,22 @@ namespace mysqlefcore
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseMySQL("server=localhost;database=library;user=user;password=password");
+      optionsBuilder.UseMySQL("INSERT CONNECTION STRING HERE");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       base.OnModelCreating(modelBuilder);
 
+
+    // Fill out Entities with values based on how you want them
+    // to appear in the database
+
       modelBuilder.Entity<Publisher>(entity =>
       {
         entity.HasKey(e => e.ID);
+        entity.HasKey(e => e.Account);
+        entity.HasKey(e => e.Balance);
         entity.Property(e => e.Name).IsRequired();
       });
 
