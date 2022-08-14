@@ -9,12 +9,21 @@ namespace mysqlefcore
     static void Main(string[] args)
     {
 
+    // NOTE the API in the tutorial appears to house 
+    // controllers
+
+    // NOTE that removing the APi directory may be prudent
+    // as in the context of the tutorial, its mainly used 
+    // in place of a ui
+
     // Insert data into db using a similar method to json class
     // creation
 
     //CHECK to see if this method creates appropriate tables
-    
-        
+
+    //NOTE that migrations still need to be figured out
+    //a migrations folder in project folder will be necessary
+    //Migrations also need to be reflected on our db after creation    
     
       InsertData();
       PrintData();
